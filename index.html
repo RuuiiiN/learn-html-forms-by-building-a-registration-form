@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+</head>
+<body>
+    <!-- konten akan di tetap kan di sini -->
+    <header>
+        <h1>Formulir pendaftaran</h1>
+        <p>Bergabunglah dengan komunitas kami</p>
+    </header>
+    <fieldset>
+        <legend>informasi pribadi</legend>
+        <form>
+            <label for="nama">Nama lengkap:</label>
+            <input type="text" name="nama" id="nama" />
+            <br />
+            <label for="email">Alamat email:</label>
+            <input type="text" name="nama" id="nama" />
+            <br />
+            <label for="password">Password:</label>
+            <input type="text" name="password" id="password">
+            <br />
+            <label for="tangal-lahir">Tanggal lahir:</label>
+            <input type="date" name="birth-date" id="birth-date" />
+            <br />
+            <label for="nomor-hp">Nomor HP:</label>
+            <input type="text" name="Nomor" id="nomor" />
+            <br />
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Informasi tambahan</legend>
+        <form>
+            <label for="jenis-kelamin">Jenis kelamin:</label>
+            <br />
+            <input type="radio" id="male" name="gender" value="male" />
+                    <label for="male">Laki laki</label>
+                    <input type="radio" id="female" name="gender" value="female" />
+                    <label for="female">Perempuan</label>
+                    <br />
+            <label for="provinsi">Provinsi:</label>
+            <select id="provinsi" name="provinsi">
+                    <option value="provinsi">Provinsi</option>
+                    <option value="timur">Jawa timur</option>
+                    <option value="barat">Jawa barat</option>
+                    <option value="tengah">Jawa tengah</option>
+                    <option value="other">Lainnya</option>
+                    </select>
+                    <br />
+                    hobby:
+                    <input type="checkbox" name="padel" id="padel" value="padel" />
+                    <label for="padel">padel</label>
+                    <input type="checkbox" name="football" id="football" value="football" />
+                    <label for="football">football</label>
+                    <input type="checkbox" name="tennis" id="tennis" value="tennis" />
+                    <label for="tennis">tennis</label>
+                    <br />
+                    <label for="biodata">Biodata singkat</label>
+                    <textarea id="biodata" name="biodata" rows="5" cols="12px">
+                        ceritakan sedikit tentang anda.
+                    </textarea>
+                    <br />
+                     <!--Input upload file-->
+                     <label for="foto anda">unggah foto anda:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" />
+                    </fieldset>
+                    <input type="checkbox" name="football" id="football" value="football" />
+                    <label for="football">saya menetujui yang berlaku <a href="https://example.com">syarat ketentuan</a></label>
+        </form>
+    </fieldset>
+</body>
+</html>
