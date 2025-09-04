@@ -1,75 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registration</title>
 </head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #eceaea;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rbga(0, 0, 0, 0.1);
+    }
+
+    .mony {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rbga(0, 0, 0, 0.1);
+    }
+
+    .subtitle {
+        margin-top: 0 auto;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .container1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    fieldset {
+        max-width: 100%;
+    }
+
+    .btn-submit {
+        background-color: rgb(57, 202, 57);
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rbga(0, 0, 0, 0.1);
+        border: none;
+        padding: 10px;
+    }
+
+    .btn-reset {
+        background-color: #dc3545;
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rbga(0, 0, 0, 0.1);
+        border: none;
+        padding: 10px;
+    }
+
+    .input-nama {
+        width: 100%;
+    }
+
+    .input-biodata {
+        width: 100%;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+</style>
+
 <body>
-    <!-- konten akan di tetap kan di sini -->
-    <header>
-        <h1>Formulir pendaftaran</h1>
-        <p>Bergabunglah dengan komunitas kami</p>
-    </header>
-    <fieldset>
-        <legend>informasi pribadi</legend>
-        <form>
-            <label for="nama">Nama lengkap:</label>
-            <input type="text" name="nama" id="nama" />
-            <br />
-            <label for="email">Alamat email:</label>
-            <input type="text" name="nama" id="nama" />
-            <br />
-            <label for="password">Password:</label>
-            <input type="text" name="password" id="password">
-            <br />
-            <label for="tangal-lahir">Tanggal lahir:</label>
-            <input type="date" name="birth-date" id="birth-date" />
-            <br />
-            <label for="nomor-hp">Nomor HP:</label>
-            <input type="text" name="Nomor" id="nomor" />
-            <br />
-        </form>
-    </fieldset>
-    <fieldset>
-        <legend>Informasi tambahan</legend>
-        <form>
-            <label for="jenis-kelamin">Jenis kelamin:</label>
-            <br />
-            <input type="radio" id="male" name="gender" value="male" />
-                    <label for="male">Laki laki</label>
-                    <input type="radio" id="female" name="gender" value="female" />
-                    <label for="female">Perempuan</label>
-                    <br />
-            <label for="provinsi">Provinsi:</label>
-            <select id="provinsi" name="provinsi">
+    <div class="mony">
+        <!-- konten akan di tetap kan di sini -->
+        <div class="header">
+            <header>
+                <h1>Formulir pendaftaran</h1>
+                <p class="subtitle">Bergabunglah dengan komunitas kami</p>
+            </header>
+        </div>
+        <fieldset>
+            <legend>informasi pribadi</legend>
+            <form>
+                <label for="nama">Nama lengkap:</label>
+                <br>
+                <input type="text" name="nama" id="nama" class="input-nama" placeholder="Masukan nama lengkap"/>
+                <br /><br>
+                <label for="email">Alamat email:</label>
+                <br>
+                <input type="text" name="nama" id="nama" class="input-nama" placeholder="contoh@email.com"/>
+                <br /><br>
+                <label for="password">Password:</label>
+                <br>
+                <input type="text" name="password" id="password" class="input-nama" placeholder="Minimal 8 karakter"/>
+                <br /><br>
+                <label for="tangal-lahir">Tanggal lahir:</label>
+                <br>
+                <input type="date" name="birth-date" id="birth-date" class="input-nama" />
+                <br /><br>
+                <label for="nomor-hp">Nomor HP:</label>
+                <br>
+                <input type="text" name="Nomor" id="nomor" class="input-nama" placeholder="0821-3879-8809"/>
+                <br /><br>
+            </form>
+        </fieldset><br><br>
+        <fieldset>
+            <legend>Informasi tambahan</legend>
+            <form>
+                <label for="jenis-kelamin">Jenis kelamin:</label>
+                <br />
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Laki laki</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Perempuan</label>
+                <br /><br>
+                <label for="provinsi">Provinsi:</label><br>
+                <select id="provinsi" name="provinsi">
                     <option value="provinsi">Provinsi</option>
                     <option value="timur">Jawa timur</option>
                     <option value="barat">Jawa barat</option>
                     <option value="tengah">Jawa tengah</option>
                     <option value="other">Lainnya</option>
-                    </select>
-                    <br />
-                    hobby:
-                    <input type="checkbox" name="padel" id="padel" value="padel" />
-                    <label for="padel">padel</label>
-                    <input type="checkbox" name="football" id="football" value="football" />
-                    <label for="football">football</label>
-                    <input type="checkbox" name="tennis" id="tennis" value="tennis" />
-                    <label for="tennis">tennis</label>
-                    <br />
-                    <label for="biodata">Biodata singkat</label>
-                    <textarea id="biodata" name="biodata" rows="5" cols="12px">
-                        ceritakan sedikit tentang anda.
-                    </textarea>
-                    <br />
-                     <!--Input upload file-->
-                     <label for="foto anda">unggah foto anda:</label>
-                    <input type="file" id="photo" name="photo" accept="image/*" />
-                    </fieldset>
-                    <input type="checkbox" name="football" id="football" value="football" />
-                    <label for="football">saya menetujui yang berlaku <a href="https://example.com">syarat ketentuan</a></label>
+                </select>
+                <br /><br>
+                hobby:
+                <input type="checkbox" name="padel" id="padel" value="padel" />
+                <label for="padel">padel</label>
+                <input type="checkbox" name="football" id="football" value="football" />
+                <label for="football">football</label>
+                <input type="checkbox" name="tennis" id="tennis" value="tennis" />
+                <label for="tennis">tennis</label>
+                <br /><br>
+                <label for="biodata">Biodata singkat:</label><br>
+                <textarea id="biodata" name="biodata" rows="5" cols="12px" class="input-biodata">ceritakan sedikit tentang anda.</textarea>
+                <br />
+                <!--Input upload file-->
+                <label for="foto anda">Upload foto profil:</label><br>
+                <input type="file" id="photo" name="photo" accept="image/*" />
+                <br><br>
+        </fieldset><br>
+        <input type="checkbox" name="football" id="football" value="football" />
+        <label for="football">saya menetujui yang berlaku <a href="https://example.com">syarat ketentuan</a></label>
+        <br><br>
+         <div class="buttons">
+        <button type="submit" class="btn btn-submit">Daftar Sekarang</button>
+        <button type="reset" class="btn btn-reset">Reset Form</button>
+        </div>
         </form>
-    </fieldset>
+        </fieldset>
+    </div>
 </body>
+
 </html>
